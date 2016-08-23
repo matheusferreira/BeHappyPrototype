@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_transparent"
+    android:baselineAligned="false"
+    android:orientation="horizontal">
+
+
+    <!-- RIGHT TITLE PART -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/product_nutrients_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:text="Tabela Nutricional"/>
+
+        <ImageView
+            android:id="@+id/title_from_to_dots_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/product_nutrients_title"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@color/contentDividerLine" />
+
+        <TextView
+            style="@style/TitleBadgeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_from_to_dots_divider"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:text="Referente a uma porção de:"
+            android:id="@+id/product_nutrient_portion_text" />
+
+        <TextView
+            android:id="@+id/product_nutrient_portion_qtd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="200ml (1 copo)"
+            android:layout_alignBottom="@+id/product_nutrient_portion_text"
+            android:layout_alignParentEnd="true" />
+
+        <LinearLayout
+            android:id="@+id/wrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1.0"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+        <me.itangqi.waveloadingview.WaveLoadingView
+            android:id="@+id/waveEnergy"
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:layout_height="40dp"
+            app:wlv_borderColor="@color/colorAccent"
+            app:wlv_borderWidth="2dp"
+            app:wlv_progressValue="60"
+            app:wlv_shapeType="rectangle"
+            app:wlv_round_rectangle="true"
+            app:wlv_triangle_direction="north"
+            app:wlv_titleTop="V. Energético"
+            app:wlv_titleTopSize="8sp"
+            app:wlv_titleCenterStrokeColor="@color/nutrientTopTitleColor"
+            app:wlv_titleCenterStrokeWidth="1dp"
+            app:wlv_titleCenterColor="@color/nutrientTopTitleColor"
+            app:wlv_titleCenter="0 kcal"
+            app:wlv_titleCenterSize="12sp"
+            app:wlv_titleBottom="0%"
+            app:wlv_titleBottomSize="12sp"
+            app:wlv_waveAmplitude="70"
+            app:wlv_waveColor="@color/colorAccent"
+            wlv_wave_background_Color="@color/colorPink"
+             />
+
+        <me.itangqi.waveloadingview.WaveLoadingView
+            android:id="@+id/waveSugar"
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:layout_height="40dp"
+            app:wlv_borderColor="@color/colorAccent"
+            app:wlv_borderWidth="2dp"
+            app:wlv_progressValue="60"
+            app:wlv_shapeType="rectangle"
+            app:wlv_round_rectangle="true"
+            app:wlv_triangle_direction="north"
+            app:wlv_titleTop="Açúcares"
+            app:wlv_titleTopSize="8sp"
+            app:wlv_titleCenterStrokeColor="@color/nutrientTopTitleColor"
+            app:wlv_titleCenterStrokeWidth="1dp"
+            app:wlv_titleCenterColor="@color/nutrientTopTitleColor"
+            app:wlv_titleCenter="0 g"
+            app:wlv_titleCenterSize="12sp"
+            app:wlv_titleBottom="*"
+            app:wlv_titleBottomSize="12sp"
+            app:wlv_waveAmplitude="70"
+            app:wlv_waveColor="@color/colorAccent"
+            wlv_wave_background_Color="@color/colorPink"
+             />
+
+        <me.itangqi.waveloadingview.WaveLoadingView
+            android:id="@+id/waveFat"
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:layout_height="40dp"
+            app:wlv_borderColor="@color/colorAccent"
+            app:wlv_borderWidth="2dp"
+            app:wlv_progressValue="1"
+            app:wlv_shapeType="rectangle"
+            app:wlv_round_rectangle="true"
+            app:wlv_triangle_direction="north"
+            app:wlv_titleTop="G. Totais"
+            app:wlv_titleTopSize="8sp"
+            app:wlv_titleCenterStrokeColor="@color/nutrientTopTitleColor"
+            app:wlv_titleCenterStrokeWidth="1dp"
+            app:wlv_titleCenterColor="@color/nutrientTopTitleColor"
+            app:wlv_titleCenter="0 g"
+            app:wlv_titleCenterSize="12sp"
+            app:wlv_titleBottom="0%"
+            app:wlv_titleBottomSize="12sp"
+            app:wlv_waveAmplitude="70"
+            app:wlv_waveColor="@color/colorAccent"
+            wlv_wave_background_Color="@color/colorPink"
+             />
+
+        <me.itangqi.waveloadingview.WaveLoadingView
+            android:id="@+id/waveSaturates"
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:layout_height="40dp"
+            app:wlv_borderColor="@color/colorAccent"
+            app:wlv_borderWidth="2dp"
+            app:wlv_progressValue="10"
+            app:wlv_shapeType="rectangle"
+            app:wlv_round_rectangle="true"
+            app:wlv_triangle_direction="north"
+            app:wlv_titleTop="G. Saturadas"
+            app:wlv_titleTopSize="8sp"
+            app:wlv_titleCenterStrokeColor="@color/nutrientTopTitleColor"
+            app:wlv_titleCenterStrokeWidth="1dp"
+            app:wlv_titleCenterColor="@color/nutrientTopTitleColor"
+            app:wlv_titleCenter="0 g"
+            app:wlv_titleCenterSize="12sp"
+            app:wlv_titleBottom="0%"
+            app:wlv_titleBottomSize="12sp"
+            app:wlv_waveAmplitude="70"
+            app:wlv_waveColor="@color/colorAccent"
+            wlv_wave_background_Color="@color/colorPink"
+             />
+
+        <me.itangqi.waveloadingview.WaveLoadingView
+            android:id="@+id/waveSodium"
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:layout_height="40dp"
+            app:wlv_borderColor="@color/colorAccent"
+            app:wlv_borderWidth="2dp"
+            app:wlv_progressValue="20"
+            app:wlv_shapeType="rectangle"
+            app:wlv_round_rectangle="true"
+            app:wlv_triangle_direction="north"
+            app:wlv_titleTop="Sódio"
+            app:wlv_titleTopSize="8sp"
+            app:wlv_titleCenterStrokeColor="@color/nutrientTopTitleColor"
+            app:wlv_titleCenterStrokeWidth="1dp"
+            app:wlv_titleCenterColor="@color/nutrientTopTitleColor"
+            app:wlv_titleCenter="0 g"
+            app:wlv_titleCenterSize="12sp"
+            app:wlv_titleBottom="0%"
+            app:wlv_titleBottomSize="12sp"
+            app:wlv_waveAmplitude="70"
+            app:wlv_waveColor="@color/colorAccent"
+            wlv_wave_background_Color="@color/colorPink"
+             />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- LEFT TITLE PART -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_weight="8"
+        android:background="@color/colorPrimaryInverse"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="20dp">
+
+    </RelativeLayout>
+</LinearLayout>

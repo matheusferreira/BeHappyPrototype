@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:background="@drawable/card_transparent"
+    >
+
+    <!-- content header line  -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccentDark"
+        android:paddingBottom="7dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="7dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Tabela Nutricional"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/arrow_down_float" />
+
+
+
+    </RelativeLayout>
+
+    <!-- content header image -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/inner_portion_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:paddingStart="20dp"
+            android:text="Porção de"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccentDark"/>
+
+        <TextView
+            android:id="@+id/head_image_left_text"
+            style="@style/ContentImageBadgeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingStart="20dp"
+            android:text="200 ml (1 copo)"
+            android:textColor="@color/colorAccentDark"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/inner_portion_title" />
+
+        <LinearLayout
+            android:id="@+id/inner_wrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1.0"
+            android:layout_below="@+id/head_image_left_text"
+            android:layout_alignParentStart="true">
+
+            <me.itangqi.waveloadingview.WaveLoadingView
+                android:id="@+id/waveEnergy"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:layout_height="40dp"
+                app:wlv_borderColor="@color/colorAccent"
+                app:wlv_borderWidth="2dp"
+                app:wlv_progressValue="60"
+                app:wlv_shapeType="rectangle"
+                app:wlv_round_rectangle="true"
+                app:wlv_triangle_direction="north"
+                app:wlv_titleTop="V. Energético"
+                app:wlv_titleTopColor="@color/nutrientTopTitleColor"
+                app:wlv_titleTopSize="8sp"
+                app:wlv_titleCenterStrokeColor="@color/nutrientStrokeColor"
+                app:wlv_titleCenterStrokeWidth="1dp"
+                app:wlv_titleCenter="0 kcal"
+                app:wlv_titleCenterColor="@color/nutrientTopTitleColor"
+                app:wlv_titleCenterSize="12sp"
+                app:wlv_titleBottom="0%"
+                app:wlv_titleBottomSize="12sp"
+                app:wlv_titleBottomColor="@color/nutrientTopTitleColor"
+                app:wlv_waveAmplitude="70"
+                app:wlv_waveColor="@color/colorAccent"
+                wlv_wave_background_Color="@color/colorPink"
+                />
+
+            <me.itangqi.waveloadingview.WaveLoadingView
+                android:id="@+id/waveSugar"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:layout_height="40dp"
+                app:wlv_borderColor="@color/colorAccent"
+                app:wlv_borderWidth="2dp"
+                app:wlv_progressValue="60"
+                app:wlv_shapeType="rectangle"
+                app:wlv_round_rectangle="true"
+                app:wlv_triangle_direction="north"
+                app:wlv_titleTop="Açúcares"
+                app:wlv_titleTopColor="@color/nutrientTopTitleColor"
+                app:wlv_titleTopSize="8sp"
+                app:wlv_titleCenterStrokeColor="@color/nutrientStrokeColor"
+                app:wlv_titleCenterStrokeWidth="1dp"
+                app:wlv_titleCenter="0 g"
+                app:wlv_titleCenterColor="@color/nutrientTopTitleColor"
+                app:wlv_titleCenterSize="12sp"
+                app:wlv_titleBottom="*"
+                app:wlv_titleBottomSize="12sp"
+                app:wlv_titleBottomColor="@color/nutrientTopTitleColor"
+                app:wlv_waveAmplitude="70"
+                app:wlv_waveColor="@color/colorAccent"
+                wlv_wave_background_Color="@color/colorPink"
+                />
+
+            <me.itangqi.waveloadingview.WaveLoadingView
+                android:id="@+id/waveFat"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:layout_height="40dp"
+                app:wlv_borderColor="@color/colorAccent"
+                app:wlv_borderWidth="2dp"
+                app:wlv_progressValue="1"
+                app:wlv_shapeType="rectangle"
+                app:wlv_round_rectangle="true"
+                app:wlv_triangle_direction="north"
+                app:wlv_titleTop="G. Totais"
+                app:wlv_titleTopColor="@color/nutrientTopTitleColor"
+                app:wlv_titleTopSize="8sp"
+                app:wlv_titleCenterStrokeColor="@color/nutrientStrokeColor"
+                app:wlv_titleCenterStrokeWidth="1dp"
+                app:wlv_titleCenter="0 g"
+                app:wlv_titleCenterColor="@color/nutrientTopTitleColor"
+                app:wlv_titleCenterSize="12sp"
+                app:wlv_titleBottom="0%"
+                app:wlv_titleBottomSize="12sp"
+                app:wlv_titleBottomColor="@color/nutrientTopTitleColor"
+                app:wlv_waveAmplitude="70"
+                app:wlv_waveColor="@color/colorAccent"
+                wlv_wave_background_Color="@color/colorPink"
+                />
+
+            <me.itangqi.waveloadingview.WaveLoadingView
+                android:id="@+id/waveSaturates"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:layout_height="40dp"
+                app:wlv_borderColor="@color/colorAccent"
+                app:wlv_borderWidth="2dp"
+                app:wlv_progressValue="10"
+                app:wlv_shapeType="rectangle"
+                app:wlv_round_rectangle="true"
+                app:wlv_triangle_direction="north"
+                app:wlv_titleTop="G. Saturadas"
+                app:wlv_titleTopColor="@color/nutrientTopTitleColor"
+                app:wlv_titleTopSize="8sp"
+                app:wlv_titleCenterStrokeColor="@color/nutrientStrokeColor"
+                app:wlv_titleCenterStrokeWidth="1dp"
+                app:wlv_titleCenter="0 g"
+                app:wlv_titleCenterColor="@color/nutrientTopTitleColor"
+                app:wlv_titleCenterSize="12sp"
+                app:wlv_titleBottom="0%"
+                app:wlv_titleBottomSize="12sp"
+                app:wlv_titleBottomColor="@color/nutrientTopTitleColor"
+                app:wlv_waveAmplitude="70"
+                app:wlv_waveColor="@color/colorAccent"
+                wlv_wave_background_Color="@color/colorPink"
+                />
+
+            <me.itangqi.waveloadingview.WaveLoadingView
+                android:id="@+id/waveSodium"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:layout_height="40dp"
+                app:wlv_borderColor="@color/colorAccent"
+                app:wlv_borderWidth="2dp"
+                app:wlv_progressValue="20"
+                app:wlv_shapeType="rectangle"
+                app:wlv_round_rectangle="true"
+                app:wlv_triangle_direction="north"
+                app:wlv_titleTop="Sódio"
+                app:wlv_titleTopColor="@color/nutrientTopTitleColor"
+                app:wlv_titleTopSize="8sp"
+                app:wlv_titleCenterStrokeColor="@color/nutrientStrokeColor"
+                app:wlv_titleCenterStrokeWidth="1dp"
+                app:wlv_titleCenter="0 g"
+                app:wlv_titleCenterColor="@color/nutrientTopTitleColor"
+                app:wlv_titleCenterSize="12sp"
+                app:wlv_titleBottom="0%"
+                app:wlv_titleBottomSize="12sp"
+                app:wlv_titleBottomColor="@color/nutrientTopTitleColor"
+                app:wlv_waveAmplitude="70"
+                app:wlv_waveColor="@color/colorAccent"
+                wlv_wave_background_Color="@color/colorPink"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+    <!-- content body layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="6dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="9dp">
+
+        <!-- addresses part -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6">
+
+                <TextView
+                    android:id="@+id/content_from_badge"
+                    style="@style/ContentMainBadgeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="Qtd por porção" />
+
+                <TextView
+                    android:id="@+id/content_from_address_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/content_from_badge"
+                    android:layout_below="@id/content_from_badge"
+                    android:text="Valor Energético"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/content_from_address_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/content_from_address_1"
+                    android:layout_below="@id/content_from_address_1"
+                    android:text="0 kcal = 0 kJ"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/content_to_badge"
+                    style="@style/ContentMainBadgeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="% VD (*)" />
+
+                <TextView
+                    android:id="@+id/content_to_address_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="14sp"
+                    android:layout_alignStart="@id/content_to_badge"
+                    android:layout_below="@id/content_to_badge" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrow" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- divider line -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="7dp"
+            android:src="@color/contentDividerLine" />
+
+
+        <!-- sodio part -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6">
+
+                <TextView
+                    android:id="@+id/sodio_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sódio"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/sodio_qtd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/sodio_title"
+                    android:layout_below="@id/sodio_title"
+                    android:text="28 mg"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/sodio_badge"
+                    style="@style/ContentMainBadgeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/sodio_vd_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/sodio_badge"
+                    android:layout_below="@id/sodio_badge"
+                    android:text="1"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- divider line -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="7dp"
+            android:src="@color/contentDividerLine" />
+
+        <!-- request button -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Não contém quantidade significativa de valor energético, carboidratos, proteínas, gorduras totais, gorduras saturadas, gordura trans e fibra alimentar."
+            android:id="@+id/textView2"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/ContentMainBadgeTitle"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="(*) % Valores diários com base em uma dieta de 2000 kcal ou 8400 kJ. Seus valores diários podem ser maiores ou menores dependendo de suas necessidades energéticas."
+            android:id="@+id/textView3"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="10dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

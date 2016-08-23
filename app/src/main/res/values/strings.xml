@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">BeHappy App</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Senha (opcional)</string>
+    <string name="action_sign_in">Entrar ou registrar</string>
+    <string name="action_sign_in_short">Entrar</string>
+    <string name="error_invalid_email">Este email é inválido.</string>
+    <string name="error_invalid_password">Esta senha é muito curta.</string>
+    <string name="error_incorrect_password">Esta senha está incorreta.</string>
+    <string name="error_field_required">Esse campo é obrigatório.</string>
+    <string name="permission_rationale">"Permissão de Contatos é necessária para auto-complemento de emails."
+    </string>
+    <string name="title_activity_main">BeHappy App</string>
+    <string name="action_settings">Configurações</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- Main buttons strings -->
+    <string name="board_product">Produto</string>
+    <string name="board_ingredient">Ingrediente</string>
+    <string name="board_barcode">Cod. Barras</string>
+    <string name="board_ecode">E-code</string>
+    <!-- String related to tabs -->
+    <string-array name="titles_tab">
+        <item>Principal</item>
+        <item>Favoritos</item>
+        <item>Sobre</item>
+    </string-array>
+
+    <!-- Favorite Fragment -->
+    <string name="favorites_label">Confire sua lista de Noticias, Produtos e Ingredientes:</string>
+
+    <!-- About Fragment -->
+    <string name="about_text"> Fragmento Sobre </string>
+    <!-- News Fragment -->
+    <string name="news_feed_text"> Notícias mais populares: </string>
+    <string name="users_online"> Temos 30 usuários online.</string>
+
+    <!-- News Details Activity -->
+    <string name="title_activity_news_detail"> Behappy News</string>
+    <string name="action_favorite">Salvar nos Favoritos</string>
+    <string-array name="news_detail_tab">
+        <item>Notícia</item>
+        <item>Comentários</item>
+        <item>Relacionados</item>
+    </string-array>
+
+    <!-- Comment Fragment -->
+    <string name="comment_label"> O que os usuários estão falando sobre: </string>
+    <string name="comment_send_btn"> Enviar </string>
+    <string name="comment_hint_box"> Comente aqui... </string>
+    <string name="title_product_list">Products</string>
+    <string name="title_product_detail">Product Detail</string>
+    <string name="title_activity_product">ProductActivity</string>
+    <string name="title_activity_product2">BeHappy: Produto</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="context_menu">Context menu</string>
+    <string name="title_activity_ingredient">IngredientActivity</string>
+</resources>

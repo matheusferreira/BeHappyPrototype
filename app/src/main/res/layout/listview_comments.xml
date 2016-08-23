@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/comment_useravatar"
+        android:padding="5dp"
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:minHeight="80dp"
+        android:minWidth="80dp"
+        android:layout_alignTop="@+id/comment_title"
+        android:layout_alignParentStart="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Username"
+        android:background="@color/colorPrimary"
+        android:id="@+id/comment_title"
+        android:paddingLeft="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/comment_body" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Data"
+        android:id="@+id/comment_data"
+        android:paddingRight="10dp"
+        android:layout_alignBottom="@+id/comment_title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Rating"
+        android:id="@+id/comment_rating"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@+id/comment_upvote"
+        android:layout_alignEnd="@+id/comment_upvote"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Comment....."
+        android:id="@+id/comment_body"
+        android:layout_below="@+id/comment_data"
+        android:layout_toRightOf="@+id/comment_useravatar"
+        android:layout_alignRight="@+id/comment_data"
+        android:layout_alignEnd="@+id/comment_data"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignBottom="@+id/comment_downvote" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/comment_upvote"
+        android:src="@android:drawable/arrow_up_float"
+        android:layout_below="@+id/comment_useravatar"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/comment_downvote"
+        android:src="@android:drawable/arrow_down_float"
+        android:layout_below="@+id/comment_rating"
+        android:layout_alignParentStart="true" />
+
+    <!-- Tava pensando em usar Expandable List para mostrar replies, mas por enquanto não deu certo.
+    Vai ser uma unica hierarquia de comentarios mesmo -->
+    <!--
+    <ExpandableListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/replies_expandableListView"
+        android:layout_below="@+id/comment_body"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" /> -->
+
+</RelativeLayout>

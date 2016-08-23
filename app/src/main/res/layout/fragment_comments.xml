@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Participe da discussão"
+        android:id="@+id/commentPage_label"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/comment_send_btn"
+        android:id="@+id/send_comment_btn"
+        android:drawableLeft="@android:drawable/ic_menu_send"
+        android:layout_alignTop="@+id/comment_field"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/comment_field"
+        android:hint="@string/comment_hint_box"
+        android:layout_below="@+id/commentPage_label"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/send_comment_btn"
+        android:layout_toStartOf="@+id/send_comment_btn" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:id="@+id/commentListView"
+        android:layout_below="@+id/send_comment_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:divider="@android:drawable/divider_horizontal_dark"
+        android:footerDividersEnabled="true"
+         />
+    <!--android:layout_marginBottom="?attr/actionBarSize"-->
+
+
+
+
+</RelativeLayout>

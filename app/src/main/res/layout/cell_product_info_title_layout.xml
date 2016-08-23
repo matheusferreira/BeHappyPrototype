@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_transparent"
+
+    android:baselineAligned="false"
+    android:orientation="horizontal">
+    <!--
+    android:background="@android:drawable/dialog_holo_dark_frame"-->
+    <!-- LEFT TITLE PART -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_weight="3"
+
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="1dp"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        android:paddingTop="1dp">
+        <!--android:background="@color/colorPink"-->
+
+        <!-- -->
+        <de.hdodenhof.circleimageview.CircleImageView
+
+            android:id="@+id/product_title_avatarImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+        <!--
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/colorPrimary" /> -->
+
+
+
+    </RelativeLayout>
+    <!-- RIGHT TITLE PART -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="5dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        >
+
+        <TextView
+            android:id="@+id/product_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:text="Product Name"/>
+
+        <ImageView
+            android:id="@+id/title_from_to_dots_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/product_title_name"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@color/contentDividerLine" />
+
+        <TextView
+            android:id="@+id/product_title_manufacture_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_from_to_dots_divider"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:text="Fabricante:"
+            android:textStyle="italic"
+            style="@style/TitleBadgeText"/>
+
+        <TextView
+            android:id="@+id/product_title_manufacture_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Fab. Value"
+            android:textSize="12sp"
+            android:layout_alignBottom="@+id/product_title_manufacture_txt"
+            android:layout_toEndOf="@+id/product_title_manufacture_txt" />
+
+        <TextView
+            android:id="@+id/product_title_category_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:text="Categoria:"
+            android:layout_below="@+id/product_title_manufacture_txt"
+            android:layout_alignStart="@+id/product_title_manufacture_txt"
+            android:textStyle="italic"
+            style="@style/TitleBadgeText"/>
+
+        <TextView
+            android:id="@+id/product_title_category_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Cat. Value"
+            android:textSize="12sp"
+            android:layout_alignBottom="@+id/product_title_category_text"
+            android:layout_toEndOf="@+id/product_title_category_text" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Origin"
+            android:id="@+id/product_title_origin"
+            android:layout_alignTop="@+id/title_from_to_dots_divider"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorAccentText"
+            android:text="Você Sabia?"
+            android:id="@+id/product_title_doyouknow"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:shadowRadius="1"
+            android:shadowDy="1"
+            android:shadowDx="1"
+            android:shadowColor="#000000"/>
+
+        <me.itangqi.waveloadingview.WaveLoadingView
+            android:id="@+id/waveLoadingView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:wlv_borderColor="@color/colorAccent"
+            app:wlv_borderWidth="2dp"
+            app:wlv_progressValue="60"
+            app:wlv_shapeType="rectangle"
+            app:wlv_round_rectangle="true"
+            app:wlv_triangle_direction="north"
+            app:wlv_titleCenterStrokeColor="@color/colorAccentDark"
+            app:wlv_titleCenterStrokeWidth="1dp"
+            app:wlv_titleCenter="60%"
+            app:wlv_titleCenterColor="@color/nutrientTopTitleColor"
+            app:wlv_titleCenterSize="12sp"
+            app:wlv_titleBottom="Sódio"
+            app:wlv_titleBottomSize="10sp"
+            app:wlv_waveAmplitude="70"
+            app:wlv_waveColor="@color/colorAccent"
+            wlv_wave_background_Color="@color/colorPink"
+            android:layout_below="@+id/product_title_category_text"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Hipertensão"
+            android:id="@+id/product_title_group_warning_txt"
+            android:layout_below="@+id/product_title_category_value"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/stop_sign"
+            android:layout_below="@+id/product_title_group_warning_txt"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/product_title_group_warning_txt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="e outros 3 grupos"
+            android:textSize="12sp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView"
+            android:layout_below="@+id/imageView"
+            android:layout_alignStart="@+id/imageView"
+            android:layout_alignEnd="@+id/title_from_to_dots_divider" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/product_title_favorite_imgbtn"
+            android:src="@drawable/fav_icon"
+            android:background="@android:color/transparent"
+            android:layout_alignTop="@+id/product_title_name"
+            android:layout_alignEnd="@+id/title_from_to_dots_divider"
+            android:longClickable="false" />
+
+
+    </RelativeLayout>
+</LinearLayout>

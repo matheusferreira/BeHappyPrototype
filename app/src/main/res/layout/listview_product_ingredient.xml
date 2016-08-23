@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/card_transparent">
+
+    <TextView
+
+        android:gravity="center"
+        android:text="Quantity"
+        android:textColor="@color/colorAccentText"
+        android:id="@+id/product_ingredient_qtd"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"/>
+
+    <!-- Use same ID to use built-in features -->
+    <TextView
+        android:textColor="@color/colorPrimaryInverse"
+        android:text="Ingredient Name"
+        android:textSize="@dimen/card_section_title"
+        android:id="@+id/product_ingredient_name"
+        android:layout_marginLeft="10dp"
+        android:paddingTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/product_ingredient_qtd" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:id="@+id/product_ingredient_category"
+        android:layout_below="@+id/product_ingredient_name"
+        android:layout_alignStart="@+id/product_ingredient_name" />
+
+
+
+
+</RelativeLayout>

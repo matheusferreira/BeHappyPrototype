@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#4fc2bd</color>
+    <color name="colorPrimaryDark">#3c8689</color>
+    <color name="colorAccent">#ed3e67</color>
+    <color name="colorAccentDark">#b02868</color>
+    <color name="colorPrimaryInverse">#715063</color>
+    <color name="colorAccentText">#fdc043</color>
+    <color name="colorPink">#f39685</color>
+    <color name="colorWhite">#fef4eb</color>
+    <color name="mainTextColor">#343d43</color>
+
+    <!-- Flipping Card colors: -->
+    <color name="contentDividerLine">@color/colorPrimaryInverse</color>
+    <color name="contentBadgeTitle">@color/colorAccentDark</color>
+    <color name="titleBadgeTitle">@color/colorAccentDark</color>
+    <color name="titleBadgeText">@color/colorAccentDark</color>
+    <color name="nutrientStrokeColor">@color/mainTextColor</color>
+    <color name="nutrientTopTitleColor">@color/mainTextColor</color>
+
+</resources>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:background="@drawable/card_transparent">
+    <!--android:background="@color/bgContent"-->
+    <!-- LEFT TITLE PART -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_weight="8"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="20dp">
+
+    </RelativeLayout>
+    <!-- RIGHT TITLE PART -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="15dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/product_groups_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:text="Grupos" />
+
+
+        <ImageView
+            android:id="@+id/title_from_to_dots_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/product_groups_title"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@color/contentDividerLine" />
+
+        <TextView
+            style="@style/TitleBadgeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_from_to_dots_divider"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:text="Grupos com alertas:"
+            android:id="@+id/product_groups_alert" />
+
+        <TextView
+            android:id="@+id/product_ingredients_qtd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="4"
+            android:layout_alignBottom="@+id/product_groups_alert"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            style="@style/TitleBadgeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="Clique para ver a lista completa."
+            android:id="@+id/groups_more_text"
+            android:layout_alignTop="@+id/product_groups_title"
+            android:layout_alignEnd="@+id/title_from_to_dots_divider" />
+
+        <TextView
+            style="@style/TitleBadgeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:text="Grupos que devem evitar:"
+            android:id="@+id/ingredient_group_pass_title"
+            android:layout_below="@+id/product_groups_alert"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="As pessoas portadoras de fenilcetonúria. Não podem ingerir nada que contenha a substância Fenilalamina"
+            android:id="@+id/ingredient_group_pass_txt"
+            android:layout_below="@+id/ingredient_group_pass_title"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+</LinearLayout>

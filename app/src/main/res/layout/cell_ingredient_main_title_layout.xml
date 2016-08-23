@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:background="@drawable/card_transparent">
+<!--android:background="@color/bgContent"-->
+    <!-- LEFT TITLE PART -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="20dp">
+
+    </RelativeLayout>
+    <!-- RIGHT TITLE PART -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="15dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/ingredient_main_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:text="Aspartame"/>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:text="(E-Code 951)"
+            android:layout_alignTop="@+id/ingredient_main_name"
+            android:layout_alignParentEnd="true" />
+
+
+
+        <ImageView
+            android:id="@+id/title_from_to_dots_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ingredient_main_name"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@color/contentDividerLine" />
+
+        <TextView
+            style="@style/TitleBadgeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_from_to_dots_divider"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:text="Categoria:"
+            android:id="@+id/product_ingredients_qtd_text" />
+
+        <TextView
+            android:id="@+id/product_ingredients_qtd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Adoçantes, Flavorizantes"
+            android:layout_alignBottom="@+id/product_ingredients_qtd_text"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            style="@style/TitleBadgeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="O aspartamo ou aspartame é um aditivo alimentar utilizado para substituir o açúcar comum, é um adoçante artificial. Ele tem maior poder de adoçar (cerca de 200 vezes maior que a sacarose) É formado quimicamente por dois aminoácidos (L-fenilalanina e L-aspártico)."
+            android:id="@+id/ingredients_more_text"
+            android:layout_below="@+id/textView7"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            style="@style/TitleBadgeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:text="Processamento:"
+            android:id="@+id/textView5"
+            android:layout_below="@+id/product_ingredients_qtd_text"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Sintético"
+            android:layout_alignBaseline="@+id/textView5"
+            android:layout_alignBottom="@+id/textView5"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            style="@style/TitleBadgeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:text="Sinônimo:"
+            android:id="@+id/textView7"
+            android:layout_below="@+id/textView6"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="APM"
+            android:layout_alignBottom="@+id/textView7"
+            android:layout_alignParentEnd="true" />
+
+
+    </RelativeLayout>
+</LinearLayout>
